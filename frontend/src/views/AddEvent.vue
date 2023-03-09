@@ -1,13 +1,14 @@
 <template>
   <div>
     <el-form class="add-event" ref="form" :model="form" label-width="120px">
-      <el-form-item label="Event title">
-        <el-input v-model="form.title"></el-input>
+      <el-form-item label="Event name">
+        <el-input
+          placeholder="Enter the event name"
+          v-model="form.name"
+        ></el-input>
       </el-form-item>
-      <el-form-item label="Event place">
-        <el-input v-model="form.place"></el-input>
-      </el-form-item>
-      <el-form-item label="Event time&date">
+
+      <el-form-item label="Event time">
         <el-col :span="11">
           <el-date-picker
             type="date"
@@ -25,6 +26,27 @@
           ></el-time-picker>
         </el-col>
       </el-form-item>
+
+      <el-form-item label="Event location">
+        <el-input
+          placeholder="Enter the location of the event"
+          v-model="form.location"
+        ></el-input>
+      </el-form-item>
+
+      <el-form-item label="Event description">
+        <el-input
+          placeholder="Give a short description for the following event"
+          type="textarea"
+          v-model="form.desc"
+        ></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button class="addButton" type="primary" @click="onSubmit"
+          >Add Event</el-button
+        >
+        <el-button class="cancelButton" @click="oncancel">Cancel</el-button>
+      </el-form-item>
     </el-form>
   </div>
 </template>
@@ -35,8 +57,8 @@ export default {
   data() {
     return {
       form: {
-        title: "",
-        place: "",
+        name: "",
+        location: "",
         date: "",
         time: "",
         desc: "",
@@ -55,5 +77,13 @@ export default {
 .add-event {
   width: 600px;
   margin: 0 auto;
+}
+.addButton {
+  width: 230px;
+}
+
+.cancelButton {
+  width: 230px;
+  margin-left: 20px;
 }
 </style>
