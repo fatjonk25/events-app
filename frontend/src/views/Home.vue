@@ -9,13 +9,14 @@
 </template>
 
 <script>
+import EventsHomeImg1 from '../assets/images/events-home.jpg'
 export default {
   name: "home - view",
   data() {
     return {
       images: [
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=1",
+          imageUrl: EventsHomeImg1,
         },
         {
           imageUrl: "https://source.unsplash.com/random/800x800/?img=32",
