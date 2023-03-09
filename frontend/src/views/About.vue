@@ -1,6 +1,6 @@
 <template>
   <div>
-    About
+    About View Test TEST
   </div>
 </template>
 
