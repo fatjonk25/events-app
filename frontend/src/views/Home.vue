@@ -9,29 +9,35 @@
 </template>
 
 <script>
-import EventsHomeImg1 from '../assets/images/events-home.jpg'
+import salle from "../assets/images/salle.avif";
+import drone from "../assets/images/drone.avif";
+import saudi from "../assets/images/saudi.png";
+import hardware from "../assets/images/hardware.avif";
+import desk from "../assets/images/desk.avif";
+import tech2 from "../assets/images/tech2.jpg";
+
 export default {
   name: "home - view",
   data() {
     return {
       images: [
         {
-          imageUrl: EventsHomeImg1,
+          imageUrl: tech2,
         },
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=32",
+          imageUrl: drone,
         },
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=62",
+          imageUrl: salle,
         },
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=47",
+          imageUrl: saudi,
         },
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=55",
+          imageUrl: hardware,
         },
         {
-          imageUrl: "https://source.unsplash.com/random/800x800/?img=87",
+          imageUrl: desk,
         },
       ],
     };
