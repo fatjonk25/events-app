@@ -1,53 +1,58 @@
 <template>
   <div>
-    <el-form class="add-event" ref="form" :model="form" label-width="120px">
-      <el-form-item label="Event name">
-        <el-input
-          placeholder="Enter the event name"
-          v-model="form.name"
-        ></el-input>
-      </el-form-item>
+    <div class="form-container">
+      <el-form class="add-event" ref="form" :model="form" label-width="120px">
+        <el-form-item class="form-item">
+          <p>Event name</p>
+          <el-input
+            placeholder="Enter the event name"
+            v-model="form.name"
+          ></el-input>
+        </el-form-item>
 
-      <el-form-item label="Event time">
-        <el-col :span="11">
-          <el-date-picker
-            type="date"
-            placeholder="Pick a date"
-            v-model="form.date"
-            style="width: 100%"
-          ></el-date-picker>
-        </el-col>
-        <el-col class="line" :span="2">-</el-col>
-        <el-col :span="11">
-          <el-time-picker
-            placeholder="Pick a time"
-            v-model="form.time"
-            style="width: 100%"
-          ></el-time-picker>
-        </el-col>
-      </el-form-item>
+        <el-form-item class="form-item">
+          <p>Event time</p>
+          <el-col :span="11">
+            <el-date-picker
+              type="date"
+              placeholder="Pick a date"
+              v-model="form.date"
+              style="width: 100%"
+            ></el-date-picker>
+          </el-col>
+          <el-col class="line" :span="2">-</el-col>
+          <el-col :span="11">
+            <el-time-picker
+              placeholder="Pick a time"
+              v-model="form.time"
+              style="width: 100%"
+            ></el-time-picker>
+          </el-col>
+        </el-form-item>
 
-      <el-form-item label="Event location">
-        <el-input
-          placeholder="Enter the location of the event"
-          v-model="form.location"
-        ></el-input>
-      </el-form-item>
+        <el-form-item class="form-item">
+          <p>Event location</p>
+          <el-input
+            placeholder="Enter the location of the event"
+            v-model="form.location"
+          ></el-input>
+        </el-form-item>
 
-      <el-form-item label="Event description">
-        <el-input
-          placeholder="Give a short description for the following event"
-          type="textarea"
-          v-model="form.desc"
-        ></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button class="addButton" type="primary" @click="onSubmit"
-          >Add Event</el-button
-        >
-        <el-button class="cancelButton" @click="oncancel">Cancel</el-button>
-      </el-form-item>
-    </el-form>
+        <el-form-item class="form-item">
+          <p>Event description</p>
+          <el-input
+            placeholder="Give a short description for the following event"
+            type="textarea"
+            v-model="form.desc"
+          ></el-input>
+        </el-form-item>
+        <el-form-item class="form-item">
+          <el-button class="addButton" type="primary" @click="onSubmit"
+            >Add Event</el-button
+          >
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
 </template>
 
@@ -78,12 +83,20 @@ export default {
   width: 600px;
   margin: 0 auto;
 }
-.addButton {
-  width: 230px;
+.form-container {
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  margin-top: 5px;
+  margin: 0 auto;
 }
+/* .el-form-item__content {
+  margin-left: 0px !important;
+} */
 
-.cancelButton {
-  width: 230px;
-  margin-left: 20px;
+.addButton {
+  width: 100%;
 }
 </style>
