@@ -5,6 +5,7 @@ import "element-ui/lib/theme-chalk/index.css";
 import router from "./router";
 import store from "./store";
 import locale from "element-ui/lib/locale/lang/en";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 Vue.use(ElementUI, { locale });
 
