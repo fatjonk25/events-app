@@ -71,8 +71,31 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      console.log("submit!");
+    async onSubmit() {
+      const event = {
+        name: this.form.name,
+        location: this.form.location,
+        date: this.form.date,
+        time: this.form.time,
+        desc: this.form.desc
+      }
+
+      this.form.name = '';
+      this.form.location = '';
+      this.form.date = '';
+      this.form.time = '';
+      this.form.desc = '';
+      
+
+      await fetch('http://localhost:3000/events', {
+        method:'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(event),
+      })
+      this.$router.push({name:'events'})
+
     },
   },
 };
@@ -86,7 +109,7 @@ export default {
 .form-container {
   width: 600px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: flex;
   margin-top: 5px;
@@ -98,5 +121,9 @@ export default {
 
 .addButton {
   width: 100%;
+}
+
+::v-deep .el-form-item__content {
+  margin-left: 0px !important;
 }
 </style>
