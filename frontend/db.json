@@ -5,25 +5,24 @@
       "name": "Event 1",
       "date": "2023/03/10",
       "time": "21:00",
-      "location": "Vushtrri",
-      "desc": "yugesfdgjhkl"
+      "location": "Saudi Arabia",
+      "desc": "Join us on 23 March in Saudi Arabia for a cutting-edge technology event showcasing the latest advancements in AI, blockchain, and IoT. Don't miss out on this exciting opportunity!"
     },
     {
       "id": 2,
       "name": "Event 2",
       "date": "2023/03/10",
       "time": "21:00",
-      "location": "Vushtrri",
-      "desc": "yugesfdgjhkl"
+      "location": "New Castle",
+      "desc": "Join us at the upcoming tech event on the university campus, where industry experts will share insights on the latest trends and tools for software development. Discover new skills and network with peers to enhance your career prospects in tech."
     },
     {
       "id": 3,
       "name": "Event 3",
       "date": "2023/03/10",
       "time": "21:00",
-      "location": "Vushtrri",
-      "desc": "yugesfdgjhkl"
+      "location": "Hamburg",
+      "desc": "Experience the future at our robotics event. Witness cutting-edge technology in action as we showcase the latest developments in robotics. Join us to learn about the potential applications of robotics and meet industry leaders who are shaping the future of this exciting field."
     }
-    
   ]
 }
