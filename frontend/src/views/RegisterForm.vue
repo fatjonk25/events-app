@@ -58,7 +58,7 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" type="submit">Register</button>
   </div>
   <div class="bt-3">
  Already a member?<a href="LoginForm">Login Here</a></div>
