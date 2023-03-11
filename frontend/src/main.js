@@ -7,13 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import store from "./store";
 import locale from "element-ui/lib/locale/lang/en";
-<<<<<<< HEAD
 import "@fortawesome/fontawesome-free/css/all.css";
 import './filters/filters'
-=======
 import './assets/main.css'
 
->>>>>>> a3ba7c9a00cfe626c6cdf9347eb6670b209b3cd4
 
 Vue.use(ElementUI, { locale });
 
