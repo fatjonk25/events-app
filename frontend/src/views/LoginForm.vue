@@ -1,36 +1,48 @@
 <template>
-  <div class="d-row align-items-center justify-content-between">
-      <h1>Login Form</h1>
+  <form class="d-row g-3 needs-validation align-items-center" novalidate>
+
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Email</label>
+      <input type="email" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a valid email.
+      </div>
+    </div>
   
-      <br />
-      <br/>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Password</label>
+      <input type="password" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please enter your password.
+      </div>
+    </div>
+
   
-      <div class="row align-items-center">
-        <div class="col-md-3 align-items-center">
-            <div class="mb-6">
-            
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Email address</label>
-  </div>
-  <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-    <label for="floatingPassword">Password</label>
-  </div>
-            
-            <div class="mb-3">
-              You dont Have Account?<a href="RegisterForm"> Register Here</a>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Login</button>
+   
+    <div class="col-12 mt-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
         </div>
       </div>
     </div>
+    <div class="col-12 mt-3">
+      <button class="btn btn-primary" type="submit">Login</button>
     </div>
-  </template>
+    <div class="mt-3">
+   You are new here ?<a href="RegisterForm">Register Here</a></div>
+  </form>
+    </template>
+        
+    <script>
+    export default {};
+   
+    </script>
+        
+    <style></style>
+        
 
-<script>
-export default {};
-</script>
-    
-<style></style>

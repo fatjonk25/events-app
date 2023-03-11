@@ -1,46 +1,73 @@
 <template>
-    <div class="ml-90 inline-block">
-      <h1 class="h-40 w-30">Register Form</h1>
-  
-      <br />
-      <br />
-  
-      <div class="row overflow-hidden">
-        <div class="col-md-3  overflow-hidden">
-          <div class="mb-6">
-            <div class="input-group mb-3">
-              <span class="input-group-text">@</span>
-              <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                <label for="floatingInputGroup1">Username</label>
-              </div>
-            </div>
-  
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
-            </div>
-            <!--Confirm Passsword-->
-            <div class="form-floating mt-3">
-              <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password">
-              <label for="floatingPassword">Confirm Password</label>
-            </div>
-            <button @click="onSubmit" type="submit" class="btn btn-primary mt-3">Register</button>
-          </div>
-          <div class="mb-3">
-            Already a member? <a href="LoginForm">Login Here</a>
-          </div>
-        </div>
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
       </div>
     </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">Password</label>
+    <input type="email" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid email.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">Password</label>
+    <input type="password" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid password.
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+  <div class="bt-3">
+ Already a member?<a href="LoginForm">Login Here</a></div>
+</form>
   </template>
       
   <script>
   export default {};
+ 
   </script>
       
   <style></style>
