@@ -6,6 +6,7 @@ import router from "./router";
 import store from "./store";
 import locale from "element-ui/lib/locale/lang/en";
 import "@fortawesome/fontawesome-free/css/all.css";
+import './filters/filters'
 
 Vue.use(ElementUI, { locale });
 

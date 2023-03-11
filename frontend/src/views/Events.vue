@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-if="loading">
+      <Loading></Loading>
+    </div>
     <div v-for="event in events" :key="event.id">
       <div class="events">
         <el-card class="box-card">
@@ -12,8 +15,8 @@
             </router-link>
             <p class="event-location ">Location: {{ event.location }}</p>
             <div class="date-time">
-              <p class="event-date">Date: {{ event.date }}</p>
-              <p class="event-time">Time: {{ event.time }}</p>
+              <p class="event-date">Date: {{ event.date | formatDate }}</p>
+              <p class="event-time">Time: {{ event.time | formatTime }}</p>
             </div>
           </div>
         </el-card>
@@ -23,23 +26,35 @@
 </template>
 
 <script>
+import Loading from '../components/Loading.vue'
+import {mapState, mapActions} from 'vuex'
+
 export default {
   name: "events-view",
+  components: {
+    Loading
+  },
   data() {
     return {
-      events: [],
+      loading: false
     };
   },
+  computed:{
+     ...mapState({
+        events: state => state.events
+    })
+  },
   methods: {
-    async getEvents() {
-      const response = await fetch("http://localhost:3000/events");
+   ...mapActions(['getEvents']),
+    async fetchEventsData() {
+      this.loading = true;
+      await this.getEvents()
+      this.loading = false;
 
-      const data = await response.json();
-      this.events = data;
-    },
+    }
   },
   beforeMount() {
-    this.getEvents();
+    this.fetchEventsData();
   },
 };
 </script>

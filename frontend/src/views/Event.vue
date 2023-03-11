@@ -1,15 +1,18 @@
 <template>
   <div>
+    <div v-if="loading">
+      <Loading></Loading>
+    </div>
     <div class="event-details">
       <h2>{{ event.name }}</h2>
       <div class="details-container">
         <div class="details-row">
           <i class="far fa-calendar-alt"></i>
-          <p>{{ event.date }}</p>
+          <p>{{ event.date | formatDate }}</p>
         </div>
         <div class="details-row">
           <i class="far fa-clock"></i>
-          <p>{{ event.time }}</p>
+          <p>{{ event.time | formatTime }}</p>
         </div>
         <div class="details-row">
           <i class="fas fa-map-marker-alt"></i>
@@ -22,25 +25,35 @@
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex'
+
+import Loading from '../components/Loading.vue'
 export default {
   name: "event-view",
+  components: {
+    Loading
+  },
   props: ["id"],
   data() {
     return {
-      event: {},
+      loading: false
     };
   },
+  computed:{
+    ...mapState({
+      event: state => state.event
+    })
+  },
   methods: {
-    async getEvent() {
-      const response = await fetch(`http://localhost:3000/events/${this.id}`);
-
-      const data = await response.json();
-
-      this.event = data;
-    },
+    ...mapActions(['getEvent']),
+    async fetchSingleEvent(){
+      this.loading = true;
+      await this.getEvent(this.id)
+      this.loading = false
+    }
   },
   beforeMount() {
-    this.getEvent();
+    this.fetchSingleEvent();
   },
 };
 </script>
