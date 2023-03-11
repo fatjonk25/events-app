@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import AddEvent from '../views/AddEvent.vue'
+import LoginForm from '../views/LoginForm.vue'
+import RegisterForm from '../views/RegisterForm.vue'
 import Events from '../views/Events.vue'
 import About from '../views/About.vue'
 import Event from '../views/Event.vue'
@@ -34,6 +36,16 @@ const routes = [
     path: '/add-event',
     name:'add-event',
     component: AddEvent
+  },
+  {
+    path: '/loginform',
+    name:'loginform',
+    component: LoginForm
+  },
+  {
+    path: '/registerform',
+    name:'registerform',
+    component: RegisterForm
   },
  
 ]
