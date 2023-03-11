@@ -8,6 +8,8 @@
           <li><router-link to="/events">Events</router-link></li>
           <li><router-link to="/add-event">Add Event</router-link></li>
           <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/LoginForm">Login</router-link></li>
+          <li><router-link to="/RegisterForm">Register</router-link></li>
         </ul>
       </nav>
     </header>
