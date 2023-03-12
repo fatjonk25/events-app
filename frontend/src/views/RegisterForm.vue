@@ -29,13 +29,13 @@
     </div>
   </div>
   <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
-    <input type="email" class="form-control" placeholder="Enter your Email" id="validationCustom03" required>
+    <input type="email" class="form-control" placeholder="Email Adress" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid email.
     </div>
   </div>
   <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
-    <input type="password" class="form-control" placeholder="Enter Password" id="validationCustom03" required>
+    <input type="password" class="form-control" placeholder="Password" id="validationCustom03" required>
     <div class="invalid-feedback ">
       Please provide a valid password.
     </div>
