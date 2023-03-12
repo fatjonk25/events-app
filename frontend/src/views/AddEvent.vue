@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="form-container">
-      <el-form class="add-event" :rules="rules" ref="form" :model="form" label-width="120px">
+    <div class="form-container d-flex justify-content-center  shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+      <el-form class="add-event col-md-4" :rules="rules" ref="form" :model="form" label-width="120px">
         <el-form-item class="form-item" label="Event Name:" prop="name">
           <el-input
             placeholder="Enter the event name"
@@ -142,26 +142,7 @@ export default {
 </script>
 
 <style scoped>
-.add-event {
-  width: 600px;
-  margin: 0 auto;
-}
-.form-container {
-  width: 600px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  display: flex;
-  margin-top: 5px;
-  margin: 0 auto;
-}
-/* .el-form-item__content {
-  margin-left: 0px !important;
-} */
 
-.addButton {
-  width: 100%;
-}
 
 ::v-deep .el-form-item__content {
   margin-left: 0px !important;

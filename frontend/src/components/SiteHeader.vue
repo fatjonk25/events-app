@@ -14,7 +14,7 @@
           <a class="nav-link" aria-current="About" href="About">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Event">EVENT</a>
+          <a class="nav-link" href="Events">EVENT</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="add-event">ADD EVENT</a>
