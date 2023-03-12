@@ -1,9 +1,12 @@
 <template>
   <div>
      <header class="header">
-      <h3>Logo</h3>
+      <a href="http://localhost:8080/">
+      <img src="../assets/logoja.png"></a>
+
       <nav>
         <ul class="nav-items">
+
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/events">Events</router-link></li>
           <li><router-link to="/add-event">Add Event</router-link></li>
@@ -23,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+img{
+  width: 80px;
+}
 .header {
   height: 80px;
   display: flex;

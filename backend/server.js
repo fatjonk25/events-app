@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 
 // Emri i bazës së të dhënave
-const dbName = 'emri-i-bazes-se-te-dhenave';
+const dbName = 'gg';
 
 // Krijo një instancë të MongoClient
 const client = new MongoClient(url, { useUnifiedTopology: true });
