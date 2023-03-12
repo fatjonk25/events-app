@@ -4,23 +4,23 @@
       <img src="../assets/logoja.png">
     <h1>Log In</h1><br>
 
-    <div class="col-md-4 mt-4">
+    <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
       <input type="email" class="form-control" placeholder="Enter your Email" id="validationCustom03" required>
       <div class="invalid-feedback">
         Please provide a valid email.
       </div>
     </div>
-    <div class="col-md-4 mt-4">
+    <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
       
       <input type="password" class="form-control" placeholder="Enter your Password" id="validationCustom03" required>
-      <div class="invalid-feedback">
+      <div class="invalid-feedback ">
         Please provide a valid password.
       </div>
     </div>
   
 
   
-    <div class="col-4 mt-3 btn-lg btn-block">
+    <div class="col-4 mt-4 btn-lg btn-block ">
       <button class="btn btn-outline-primary" type="submit">Login</button>
     </div>
     <div class="mt-3">
