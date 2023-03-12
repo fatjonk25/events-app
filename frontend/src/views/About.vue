@@ -52,6 +52,20 @@ export default {
 };
 </script>
 <style scoped>
+
+
+@media only screen and (max-width: 768px) {
+   .about {
+      padding: 10px;
+   }
+}
+
+@media only screen and (max-width: 576px) {
+   .about {
+      padding: 5px;
+   }
+}
+
 .about {
   max-width: 800px;
   margin: 0 auto;
@@ -165,4 +179,5 @@ p {
 .contact-section li {
   margin-bottom: 10px;
 }
+
 </style>

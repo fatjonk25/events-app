@@ -38,8 +38,6 @@
     img{
       width: 140px;
     }
-    button{
-      width: 200px;
-    }
+   
   </style>
         

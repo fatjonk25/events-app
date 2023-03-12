@@ -1,7 +1,7 @@
 <template>
    
 
-<form class="d-flex flex-column g-3 needs-validation mx-auto text-center align-items-center " novalidate>
+<form class="object-fit-fill d-flex flex-column g-3 needs-validation mx-auto text-center align-items-center " novalidate>
 
   <h1>Sign UP</h1><br>
   <div class="col-md-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
@@ -17,17 +17,13 @@
     </div>
   </div>
   <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
-    <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <div class="invalid-feedback">
-        Please choose a username.
-      </div>
+    
       <input type="text" class="form-control" placeholder="Username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
       <div class="invalid-feedback">
         Please choose a username.
       </div>
     </div>
-  </div>
+
   <div class="col-md-4 mt-4 shadow-sm p-0 mb-0 bg-body-tertiary rounded">
     <input type="email" class="form-control" placeholder="Email Adress" id="validationCustom03" required>
     <div class="invalid-feedback">
@@ -62,10 +58,7 @@
   </script>
       
   <style>
-  body{
-    overflow: scroll;
-    scroll-behavior: smooth;
-  }
+
 
   
 </style>
